@@ -1,0 +1,63 @@
+*,
+*:before,
+p:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+}
+body {
+  margin: 0;
+}
+
+header {
+  font-size: 2rem;
+  padding: 1rem;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+main {
+  height: 100vh;
+}
+
+.slider--red {
+  accent-color: #dc143c;
+}
+
+.slider--green {
+  accent-color: green;
+}
+
+.slider--blue {
+  accent-color: #0000cd;
+}
+
+.header > div {
+  padding: 0.5rem;
+}
+
+@media screen and (min-width: 786px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .range-red {
+    margin-left: 2rem;
+    margin-right: 1.5rem;
+  }
+
+  .range-green {
+    margin-right: 1.5rem;
+  }
+
+  .rgb-value {
+    position: absolute;
+    right: 4rem;
+  }
+}

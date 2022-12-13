@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Mixer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="range-red"><label for="slider-red">r</label>
+            <input id="slider-red" class="slider slider--red" type="range" step="1" min="0" max="255" value="30">
+        </div>
+        <div class="range-green"><label for="slider-green">g</label>
+            <input id="slider-green" class="slider slider--green" type="range" step="1" min="0" max="255" value="144">
+        </div>
+        <div class="range-blue"><label for="slider-blue">b</label>
+            <input id="slider-blue" class="slider slider--blue" type="range" step="1" min="0" max="255" value="255">
+        </div>
+        <div class="rgb-value">rgb (<span class="rgb-r">30</span>, <span class="rgb-g">144</span>, <span
+                class="rgb-b">255</span>)</div>
+    </header>
+    <main id="main">
+    </main>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
