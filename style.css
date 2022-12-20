@@ -41,23 +41,26 @@ main {
   padding: 0.5rem;
 }
 
+.button {
+  font-size: 1.5rem;
+  border-radius: 0.2rem;
+}
+
 @media screen and (min-width: 786px) {
   .header {
     display: flex;
     flex-direction: row;
-  }
-
-  .range-red {
-    margin-left: 2rem;
-    margin-right: 1.5rem;
-  }
-
-  .range-green {
-    margin-right: 1.5rem;
+    align-items: baseline;
+    gap: 1.5rem;
   }
 
   .rgb-value {
-    position: absolute;
-    right: 4rem;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .button {
+    margin-bottom: 1.5rem;
   }
 }
