@@ -57,3 +57,29 @@ rangeB.addEventListener("input", (event) => {
 });
 
 changeBackground(r, g, b);
+
+// Variable für Button
+const btn = document.querySelector("button");
+
+// Click Event auf Button
+btn.addEventListener("click", changeRandom);
+
+//Fetch API mit changeRandom function - per Knopfdruck wird Hintergrundfarbe beliebig geändert
+function changeRandom() {
+  fetch("https://dummy-apis.netlify.app/api/color")
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      r = data.rgb.r;
+      g = data.rgb.g;
+      b = data.rgb.b;
+
+      rangeR.value = r;
+      rangeG.value = g;
+      rangeB.value = b;
+
+      changeBackground(r, g, b);
+      updateColorValue(r, g, b);
+    });
+}
