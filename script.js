@@ -36,27 +36,29 @@ rgbR.innerText = r;
 rgbG.innerText = g;
 rgbB.innerText = b;
 
-//Funktionen mit dem Slider den jeweiligen Farbwert festlegen
+// Funktionen um jeweilige Slider zu synchronisieren
 rangeR.addEventListener("input", (event) => {
   //console.log(event.target.value);
   r = event.target.value;
-  changeBackground(r, g, b);
-  updateColorValue(r, g, b);
+  updateColor();
 });
 
 rangeG.addEventListener("input", (event) => {
   g = event.target.value;
-  changeBackground(r, g, b);
-  updateColorValue(r, g, b);
+  updateColor();
 });
 
 rangeB.addEventListener("input", (event) => {
   b = event.target.value;
-  changeBackground(r, g, b);
-  updateColorValue(r, g, b);
+  updateColor();
 });
 
 changeBackground(r, g, b);
+
+function updateColor() {
+  changeBackground(r, g, b);
+  updateColorValue(r, g, b);
+}
 
 // Variable für Button
 const btn = document.querySelector("button");
